@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #080710;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    padding: 20px;
+    position:relative;
+}
+
+.background {
+    width: 430px;
+    height: 520px;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    z-index:-1;
+}
+
+.background .shape {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.shape:first-child {
+    background: linear-gradient(#1845ad, #23a2f6);
+    right: -500px;
+    top: -80px;
+}
+
+.shape:last-child {
+    background: linear-gradient(to right, #ff512f, #f09819);
+    left: -500px;
+    bottom: -80px;
+}
+
+h1 {
+    text-transform: uppercase;
+    color:#3b9ee0;
+    font-size: 40px;
+    font-weight: 40px;
+    margin-top: 20px;
+    margin-left: 20px; 
+    /* Center the heading */
+}
+
+.container {
+    padding: 20px;
+    color: #343a40; /* Dark blue text color */
+}
+
+.blog-post {
+    position:relative;
+    background-color: rgba(255,255,255,0.13); /* White background */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px; /* Increase margin */
+    overflow: hidden;
+    display: flex;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding:20px;
+}
+
+.blog-post img {
+    max-width: 300px; /* Increase image width */
+    max-height: 300px;
+    border-radius: 5px; /* Apply border radius to image */
+    
+}
+
+.blog-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.blog-post h3,
+.blog-post p {
+    margin: 0;
+}
+
+.blog-post h4 {
+    position:absolute;
+    color:rgba(25, 240, 168, 0.87); /* Blue heading color */
+    font-size: 18px; /* Increase heading font size */
+    bottom: 20px;
+    right:20px;
+}
+
+.blog-post h3 {
+    color:rgba(25, 240, 168, 0.87); /* Blue subheading color */
+    font-size: 24px; /* Increase subheading font size */
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    color:#ffffff; /* Dark blue paragraph color */
+    font-size: 18px; /* Increase paragraph font size */
+    line-height: 1.5;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center; /* Center align horizontally */
+    margin-top: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    background-color: #1f92de;
+    color: #ffffff; /* Blue link color */
+    padding: 20px; /* Blue border */
+    border-radius: 50%; /* Make it circular */
+    margin: 10px 5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center; /* Center align vertically */
+}
+
+.nav-links a:hover {
+    background-color: #145a8a;; /* Blue hover background */
+    color: #ffffff; /* White text on hover */
+}
+
+.nav-links a strong {
+    font-weight: bold;
+    font-size: 24px;
+}
+.update {
+    background-color: #043c62;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.del{
+    background-color: rgb(165, 18, 18);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.update:hover {
+    background-color: #23a2f6;
+}
+.del:hover {
+    background-color:  rgb(233, 53, 53);
+}
+    </style>
+</head>
+<body><div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
+    <h1>AUTHORS</h1>
+    <div class="nav-links">
+        <a href="/" class="dash">DASHBOARD</a>
+    </div>
+    <%authors.forEach((element)=>{%>
+        <div class="blog-post">
+            <img src="<%=element.pic%>" alt="<%=element.username%>">
+            <div class="blog-content">
+            <h3>Author: <%=element.username%></h3>
+            <p>Age: <%=element.age%></p>
+            <p>Address: <%=element.address%></p>
+            <button onclick="updateUser('<%= element.userId %>')" class="update">Update</button>
+            <button onclick="deleteUser('<%= element.userId %>')" class="del">Delete</button>
+        </div>
+        </div>
+       <%})%>
+       <script>
+        function updateUser(id) {
+            window.location.href = `/updateUser/${id}`;
+        }
+        function deleteUser(id) {
+        console.log("i am running");
+        console.log(id);
+        fetch(`/deleteUser/${id}`)
+        .then(response => {
+                window.location.reload();
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+    }
+    </script>
+    <div class="nav-links">
+        <a href="/addUser" class="add"><strong>+</strong></a>
+    </div>
+</body>
+</html>

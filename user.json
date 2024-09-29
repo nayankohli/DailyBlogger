@@ -1,0 +1,38 @@
+[
+  {
+    "username": "Nayan",
+    "pass": "123",
+    "age": "21",
+    "address": "Pinjore",
+    "userId": 2,
+    "pic": "",
+    "role": "admin"
+  },
+  {
+    "username": "Tamanna",
+    "pass": "111",
+    "age": "19",
+    "address": "Delhi NCR",
+    "userId": 3,
+    "pic": "5fe3de55860cf9466c336debdff4e526",
+    "role": "user"
+  },
+  {
+    "username": "Vansh",
+    "pass": "222",
+    "age": "21",
+    "address": "Saharanpur",
+    "userId": 4,
+    "pic": "0849e9527558753fb414e1b36a25d9bb",
+    "role": "user"
+  },
+  {
+    "username": "Yuvraj",
+    "pass": "444",
+    "age": "21",
+    "address": "Baddi",
+    "userId": 5,
+    "pic": "9c0521fa9528fefa5250832c39ad0b3c",
+    "role": "user"
+  }
+]

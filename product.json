@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Nayan",
+    "topic": "Fashion",
+    "desc": "The rise of fashionable Instagram influencers and stylists paved the way for the bloggers on our list to have a significant presence online. Many of these bloggers started out on social media, and their keen eye for style did not go unnoticed by their followers. While they have their own website, most of them continue to be active on Instagram and YouTube.",
+    "pic": "d1b9d7cdcecb21132c9404ffe522b975",
+    "blogid": 4
+  },
+  {
+    "name": "Nayan",
+    "topic": "Pinch of Yum",
+    "desc": "Whether you are a strict vegetarian or trying to include more plant-based meals in your diet, this collection of tried and tested, easy vegetarian recipes will help you find foods you will love.I personally enjoy vegetarian meals as they are faster to cook and I love adding colorful seasonal produce to my family meals. My children love these delicious vegetarian recipes that are perfectly spiced and simply delicious. One of our family favorites for busy weeknights and for entertaining is the Instant Pot Vegetable & Paneer Biryani.",
+    "pic": "b9d8b6701b1d28045a03a3babb65bd2f",
+    "blogid": 5
+  },
+  {
+    "name": "Tamanna",
+    "topic": "Beans and Lentils",
+    "desc": "Lentils and beans can be used to prepare delicious daals and curries, some of my favorites are Easy Spinach Dal, Black Eyed Peas Curry and quintessential Indian soul food, Chana Masala. Using the Instant Pot to make these recipes packs in hours of slow-cooked bold flavors in minutes. Serve them with parathas or rice for a satisfying meal the whole family will enjoy.\r\n\r\nMy newest obsession and also super popular amongst my readers is Palak Khichdi which is a wholesome vegetarian dish made with lentils, rice and spinach. This comforting and healthy dish has been a go-to meal for many busy weeknights in our home. \r\n\r\nYou’ll find a wide variety of hearty meals such as Buffalo Chicken Chili, Pasta e Fagioli or Misir Wot - Ethiopian Spicy Lentil Stew. Made with lentils and flavored with an Ethiopian spice mix called Berbere it’s delicious!",
+    "pic": "2264ab2ad2a9b6bc594d5892170865b9",
+    "blogid": 6
+  },
+  {
+    "name": "Vansh",
+    "topic": "The Porche Cayman GT4 RS",
+    "desc": "Hailed as being one of the most memorable vehicles you could dream of driving, 2022 sees the launch of the Porsche 718 Cayman GT4 RS. An evolutionary masterpiece, crafted with the same ethos as the 911 GT3 with key adjustments that give it its own presence, this vehicle promises to nudge at your inner thrillseeker. Every review found since the marque released it into the market shouts the same thing – the GT4 RS is exhilarating, exciting and entertaining all rolled into one.",
+    "pic": "b5d12d9d0fd728d30a06f5a65ca2a133",
+    "blogid": 7
+  },
+  {
+    "name": "Yuvraj",
+    "topic": "Air Jordans",
+    "desc": "Air Jordan is a line of basketball shoes produced by Nike. Related apparel and accessories are marketed under the Jordan Brand.The first Air Jordan shoe was produced for basketball player Michael Jordan during his time with the Chicago Bulls on November 17, 1984 and released to the public on April 1, 1985.The shoes were designed for Nike by Peter Moore, Tinker Hatfield, and Bruce Kilgore.The Jordan Logo, known as the \"Jumpman\", originated from a photograph by Jacobus Rentmeester, taken before Jordan played for Team USA in the 1984 Summer Olympics.",
+    "pic": "5d069517eb5d143cebd231b2c6afbcee",
+    "blogid": 8
+  }
+]

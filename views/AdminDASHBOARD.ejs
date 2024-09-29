@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #080710;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    padding: 20px;
+    position:relative;
+}
+
+.background {
+    width: 430px;
+    height: 520px;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    z-index:-1;
+}
+
+.background .shape {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.shape:first-child {
+    background: linear-gradient(#1845ad, #23a2f6);
+    right: -500px;
+    top: -80px;
+}
+
+.shape:last-child {
+    background: linear-gradient(to right, #ff512f, #f09819);
+    left: -500px;
+    bottom: -80px;
+}
+
+h1 {
+    text-transform: uppercase;
+    color:#3b9ee0;
+    font-size: 40px;
+    font-weight: 40px;
+    margin-top: 20px;
+    margin-left: 20px; 
+    /* Center the heading */
+}
+
+.container {
+    padding: 20px;
+    color: #343a40; /* Dark blue text color */
+}
+
+.blog-post {
+    position:relative;
+    background-color: rgba(255,255,255,0.13); /* White background */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px; /* Increase margin */
+    overflow: hidden;
+    display: flex;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding:20px;
+}
+
+.blog-post img {
+    max-width: 300px; /* Increase image width */
+    max-height: 300px;
+    border-radius: 5px; /* Apply border radius to image */
+    
+}
+
+.blog-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.blog-post h3,
+.blog-post p {
+    margin: 0;
+}
+
+.blog-post h4 {
+    position:absolute;
+    color:rgba(25, 240, 168, 0.87); /* Blue heading color */
+    font-size: 18px; /* Increase heading font size */
+    bottom: 20px;
+    right:20px;
+}
+
+.blog-post h3 {
+    color:rgba(39, 183, 135, 0.87); /* Blue subheading color */
+    font-size: 24px; /* Increase subheading font size */
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    color:#ffffff; /* Dark blue paragraph color */
+    font-size: 18px; /* Increase paragraph font size */
+    line-height: 1.5;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    background-color:#043c62;
+    color: #ffffff; /* Blue link color */
+    padding: 10px; /* Blue border */
+    border-radius: 5px;
+    margin:0 10px ;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color:#23a2f6; /* Blue hover background */
+    color: #ffffff; /* White text on hover */
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <h1>WELCOME <%= name.username %></h1>
+    <div class="container">
+        <% product.forEach((element) => { %>
+        <div class="blog-post">
+            <img src="<%= element.pic %>" alt="<%= element.topic %>">
+            <div class="blog-content">
+                <h3><%= element.topic %></h3>
+                <p><%= element.desc %></p>
+                <h4>~<%= element.name %></h4>
+            </div>
+        </div>
+        <% }) %>
+        <div class="nav-links">
+            <a href="/bloggs">BLOGS</a>
+            <a href="/authors">AUTHORS</a>
+            <a href="/logout">LOGOUT</a>
+        </div>
+    </div>
+</body>
+</html>
